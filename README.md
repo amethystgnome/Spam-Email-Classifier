@@ -1,16 +1,15 @@
 # 254FinalProject
+## Create an Environment and Move to Working Directory
 
-Create an environment	 
+**macOS/Linux:**
 
-Move to working directory 
-
-macOS/Linux:
 
 Python3 -m venv .venv
 
 . .venv/bin/activate
 
-Windows:
+
+**Windows:**
 
 py -3 -m venv .venv
 
