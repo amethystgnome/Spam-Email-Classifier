@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.env
+
+# Flask instance folder
+instance/
+
+# Pytest
+.cache
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+db.sqlite3
+db.sqlite3-journal
+
+# Visual Studio Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Environment variables
+.env
+.env.local
+
+# SQLite database files (if used)
+*.sqlite
+*.sqlite3
+
+# If you're using a PostgreSQL, MySQL, or similar database, include the dump files
+*.sql
+*.dump
+
+# Logs
+logs/
+*.log
+
+# Other files and folders
+*.bak
+*.swp
+*.tmp
