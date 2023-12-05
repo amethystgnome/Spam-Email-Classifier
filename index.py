@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect
 from mongoengine import Document, StringField, connect
 import joblib
 import spam_classifier
-import logging
 
 app = Flask(__name__)
 
@@ -18,15 +17,13 @@ class Email(Document):
     content = StringField(required=True)
     spam_or_real = StringField()
 
-@app.route('/train-model', methods=['GET', 'POST'])
-def train_model():
-    if request.method == 'POST':
-        spam_classifier.train()
-        global model, vectorizer
-        model = joblib.load('model.pkl')
-        vectorizer = joblib.load('feature_extraction.pkl')
-        return "Model retrained successfully", 200
-    return render_template('train-model.html')
+def load_model_and_vectorizer():
+    global model, vectorizer
+    spam_classifier.train()  # Train the model
+    model = joblib.load('model.pkl')
+    vectorizer = joblib.load('feature_extraction.pkl')
+
+load_model_and_vectorizer()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -46,7 +43,7 @@ def index():
         entry = Email(subject=subject, content=content, spam_or_real=spam_or_real)
         entry.save()
         
-        return redirect('/')
+        return redirect('/emails')
     return render_template('index.html')
 
 @app.route("/emails")
