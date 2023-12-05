@@ -8,7 +8,7 @@
     <h1>Emails</h1>
     <ul>
         {% for email in emails %}
-            <li><strong>{{ email.title }}</strong>: {{ email.content }}</li>
+            <li><strong>{{ email.subject }}{{ email.content }}</strong>: {{ email.spam_or_real }}</li>
         {% endfor %}
     </ul>
 </body>
