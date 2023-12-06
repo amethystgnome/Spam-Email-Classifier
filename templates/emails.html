@@ -10,8 +10,8 @@
     <ul>
         {% for email in emails %}
             <li class="email-box">
-                <u>Subject:</u> <br> 
-                {{ email.subject }}  <br> 
+                <u>Subject:</u> 
+                {{ email.subject }}  <br> <br>
                 {{ email.content }} <br><br> 
                 Result: <strong>{{ email.spam_or_real }}</strong>
             </li>
