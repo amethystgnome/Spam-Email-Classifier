@@ -17,3 +17,14 @@ body {
 label {
     text-align: left;
 }
+.email-box {
+    background-color: black;
+    border: 1px solid rgb(255, 255, 255); /* Solid border with a dark color */
+    padding: 10px; /* Some padding inside the box */
+    margin-bottom: 10px; /* Space between boxes */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
