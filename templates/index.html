@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Email Classifier</title>
+    <title>Spam Email Dectector</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <h1>Email Classifier</h1>
+    <h1>Spam Email Detector</h1>
     <form action="/" method="post">
-        <label for="subject">Subject:</label>
+        <label for="subject">Email Subject:</label>
         <br>
-        <input type="text" id="subject" name="subject" required><br><br>
+        <input type="text" id="subject" name="subject" size="38" required><br><br>
 
-        <label for="content" >Content:</label>
+        <label for="content" >Email Body:</label>
         <br>
-        <textarea id="content" name="content" required></textarea><br><br>
+        <textarea id="content" name="content" rows="18" cols="37"></textarea><br><br>
 
         <input type="submit" value="Submit">
     </form>

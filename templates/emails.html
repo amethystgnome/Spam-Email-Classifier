@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Emails</title>
+    <title>Results Page</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <h1>Emails</h1>
+    <h1>Results Page</h1>
     <ul>
         {% for email in emails %}
-            <li><strong>{{ email.subject }}{{ email.content }}</strong>: {{ email.spam_or_real }}</li>
+            <li><u>Email subject:</u> <br> {{ email.subject }} <br><br> <u>Email body:</u> <br> {{ email.content }} <br><br> 
+                Result: <strong>{{ email.spam_or_real }}</strong></li><br>
         {% endfor %}
     </ul>
 </body>
